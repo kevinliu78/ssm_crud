@@ -31,7 +31,7 @@ public class EmployeeController {
 	@ResponseBody
 	public Msg getEmpsWithJson(@RequestParam(value="pn",defaultValue="1")Integer pn,@RequestParam(value="pageSize",defaultValue="5")Integer pageSize){
 		PageHelper.startPage(pn, pageSize);
-		//startPage后面紧跟的查询就是分页查询
+		//startPage后面紧跟的查询就是分页查询去去去
 		List<Employee> emps = employeeService.getAll();
 		PageInfo<Employee> info = new PageInfo<Employee>(emps,5);
 		return Msg.success().add("pageInfo", info);
